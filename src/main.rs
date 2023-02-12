@@ -16,7 +16,7 @@ async fn main() -> Result<(), Box<dyn Error>> {
     let mut string: String = String::new();
 
     let mut current_y = 0;
-    for (x, y, val) in image.grayscale().pixels() {
+    for (_, y, val) in image.grayscale().pixels() {
         if current_y != y {
             string.push('\n');
         } else {
